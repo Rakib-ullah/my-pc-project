@@ -1,0 +1,12 @@
+{% extends "Blog/base.html" %}
+{% block content %}
+
+
+{% for post in blog_data %}
+<h1>{{ post.title }}</h1>
+<h4>{{ post.content }}</h4>
+<p>{{ post.aythor }}</p>
+<p>{{ post.post_datetime }}</p>
+{% endfor %}
+
+{% endblock %}

@@ -3,10 +3,17 @@
 
 
 {% for post in blog_data %}
-<h1>{{ post.title }}</h1>
-<h4>{{ post.content }}</h4>
-<p>{{ post.aythor }}</p>
-<p>{{ post.post_datetime }}</p>
+<article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="#">{{ post.aythor }}</a>
+      <small class="text-muted">{{ post.post_datetime }}</small>
+    </div>
+    <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+    <p class="article-content">{{ post.content }}</p>
+  </div>
+</article>
+
 {% endfor %}
 
 {% endblock %}
